@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RoboKids — Children's Robotics School</title>
+  <meta name="description" content="Interactive robotics and programming classes for kids from 6 years old.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#top">RoboKids</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="#programs">programs</a></li>
+      <li><a href="#prices">prices</a></li>
+      <li><a href="#signup">contact</a></li>
+    </ul>
+    <a class="phone" href="tel:+77002509031">+77002509031</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <h1>Raising Engineers from 6 Years Old</h1>
+    <p>Interactive robotics &amp; programming classes for kids.</p>
+    <div class="hero-photos">
+      <img src="images/kids-1.webp" alt="Children building a Lego robot" width="300" height="200">
+      <img src="images/kids-2.webp" alt="Child with an assembled robot" width="300" height="200">
+    </div>
+    <a class="cta" href="#signup">Trial lesson</a>
+  </section>
+
+  <section class="section" id="programs">
+    <h2>Our Programs</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Lego Modeling</h3>
+        <p class="age">Age: 6–8 years</p>
+        <p>Basics of mechanics and basic logic using Lego Education.</p>
+      </article>
+      <article class="card">
+        <h3>Arduino Microcontrollers</h3>
+        <p class="age">Age: 9–12 years</p>
+        <p>Building real electronic circuits, connecting sensors, and learning foundational C++ programming for microcontrollers.</p>
+      </article>
+      <article class="card">
+        <h3>Python for Robotics</h3>
+        <p class="age">Age: 13+ years</p>
+        <p>Advanced programming concepts, algorithm logic, AI integration, and direct robot control using Python.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section alt" id="prices">
+    <h2>Prices</h2>
+    <div class="grid">
+      <article class="card"><h3>Trial lesson</h3><p class="price">Free</p><p>60 minutes, materials included.</p></article>
+      <article class="card"><h3>Monthly</h3><p class="price">25 000 ₸</p><p>8 lessons, small groups.</p></article>
+      <article class="card"><h3>Term</h3><p class="price">65 000 ₸</p><p>24 lessons and a certificate.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="signup">
+    <h2>Apply for a Trial Lesson</h2>
+    <form class="form" id="form" novalidate>
+      <label for="name">Applicant's Name.
+        <input id="name" name="name" type="text" placeholder=" " required minlength="2">
+      </label>
+      <label for="phone">Phone Number
+        <input id="phone" name="phone" type="tel" placeholder=" " pattern="[+0-9\s\-()]{10,}" required>
+      </label>
+      <label for="email">Email
+        <input id="email" name="email" type="email" placeholder=" " required>
+      </label>
+      <label for="age">Child's Age
+        <input id="age" name="age" type="number" min="6" max="16" placeholder=" " required>
+      </label>
+      <fieldset class="courses">
+        <legend>Select course</legend>
+        <label class="pill"><input type="radio" name="course" value="Lego Modeling" required><span>Lego Modeling</span></label>
+        <label class="pill"><input type="radio" name="course" value="Arduino Microcontrollers"><span>Arduino Microcontrollers</span></label>
+        <label class="pill"><input type="radio" name="course" value="Python for Robotics"><span>Python for Robotics</span></label>
+      </fieldset>
+      <button class="send" type="submit">Send Application.</button>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <section>
+      <h2>Contacts</h2>
+      <address>
+        RoboKids School<br>
+        Abay Ave. 10, Almaty, Kazakhstan<br>
+        <a href="tel:+77002509031">+77002509031</a>
+      </address>
+      <ul class="social">
+        <li><a href="https://t.me/" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://wa.me/77002509031" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="#programs">programs</a></li>
+        <li><a href="#prices">prices</a></li>
+        <li><a href="#signup">contact</a></li>
+      </ul>
+      <button class="theme-btn" id="themeBtn" type="button" aria-pressed="false">🌙 Dark mode</button>
+    </section>
+    <section class="map">
+      <h2>Find us</h2>
+      <iframe title="School location map" loading="lazy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=76.93%2C43.23%2C76.97%2C43.26&amp;layer=mapnik"></iframe>
+    </section>
+  </div>
+  <p class="legal">© 2026 RoboKids. All rights reserved. · <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
